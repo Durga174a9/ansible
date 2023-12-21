@@ -3,11 +3,11 @@
   vars:
     name: durga
     role: system engineer
-  tasks: trying to use varible's
+  tasks: 
   - name: using name varible
     ansible.builtin.debug:
      msg: "Hi this is {{name}}"
 
   - name: using role varible
     ansible.builtin.debug:
-     msg: "Hi this is {{name}} and role is {{role}}"
+     msg: "Hi this is {{name}} and role is {{role}}" 
