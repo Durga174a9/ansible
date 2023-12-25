@@ -1,5 +1,4 @@
 ---
----
 - name: 'Defining vars in tasks level also'
   hosts: localhost
   vars:
@@ -11,5 +10,5 @@
      name: prasad
      user_id: prasad_99
     ansible.builtin.debug:
-     msg: 'user name {{ name }} and user_id is {{ user_id }}
+     msg: 'user name {{ name }} and user_id is {{ user_id }}'
 
