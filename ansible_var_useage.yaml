@@ -1,18 +1,15 @@
 ---
-- name: 'learing how to define variables in ansible playbook'
-  hosts: local
+---
+- name: 'Defining vars in tasks level also'
+  hosts: localhost
   vars:
-    name: durga
-    user_id: durga_99
-    password: Nsgdr
+   name: durga
+   user_id: durga_99
   tasks:
-  vars:
-    name: hey
-    user_id: hey_99
-    password: '1234'
-  - name: 'printing user name'
+  - name: 'Defining vars in tasks'
+    vars:
+     name: prasad
+     user_id: prasad_99
     ansible.builtin.debug:
-      msg: 'user name is {{ name }}'
-      msg: 'user_id is {{ user_id }}'
-      msg: 'user password {{ password }}'  
+     msg: 'user name {{ name }} and user_id is {{ user_id }}
 
