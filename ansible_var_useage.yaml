@@ -5,7 +5,7 @@
     name: durga
     user_id: durga_99
     password: Nsgdr
-  takes:
+  tasks:
   vars:
     name: hey
     user_id: hey_99
