@@ -1,0 +1,18 @@
+---
+- name: 'learing how to define variables in ansible playbook'
+  hosts: local
+  vars:
+    name: durga
+    user_id: durga_99
+    password: Nsgdr
+  takes:
+  vars:
+    name: hey
+    user_id: hey_99
+    password: '1234'
+  - name: 'printing user name'
+    ansible.builtin.debug:
+      msg: 'user name is {{ name }}'
+      msg: 'user_id is {{ user_id }}'
+      msg: 'user password {{ password }}'  
+

@@ -1,0 +1,10 @@
+---
+- name: 'adding user in python server'
+  hosts: 'python'
+  vars:
+    user: durga
+  tasks:
+  - name: 'creating user in python server'
+    ansible.builtin.user:
+      user: '{{ user }}'
+       
