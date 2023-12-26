@@ -1,0 +1,15 @@
+---
+# this playbook taken the vars as in by asking user, It's like read -p in linux, there private is flase repersent what we are entering is not printed on prompt
+- name: 'taking var from promt'
+  hosts: localhost
+  vars_prompt:
+  - name: user
+    prompt: 'please enter user name'
+    private: flase 
+  - name: passwd
+    prompt: 'please enter passwd '
+    private: true
+  tasks:
+  - name: "printimg var which are taken from prompt"
+    ansible.builtin.debug:
+      msg: 'they this is {{ user }} and my password is {{ passwd }}' 

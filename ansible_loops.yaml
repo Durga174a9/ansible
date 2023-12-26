@@ -1,0 +1,17 @@
+---
+- name: 'trying loops'
+  become: 'true'
+  hosts: localhost
+  vars:
+   packages:
+   - tree
+   - git
+   - python
+   - java
+   - nginx
+  tasks:
+  - name: "trying to install packages"
+    ansible.builtin.package:
+      name: '{{ item }}'
+      state: present
+    loop: '{{ packages }}'  
